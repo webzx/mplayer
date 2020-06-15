@@ -1,8 +1,20 @@
-import React from 'react';
+import React,{Component} from 'react';
+import {withRouter} from 'react-router'
+
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+class App extends Component{
+  render() {
+    const {children} = this.props;
+    return children;
+  }
+}
+
+export default withRouter(App);
+
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -16,11 +28,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React {name}
         </a>
       </header>
     </div>
   );
 }
 
-export default App;
+export default App;*/
